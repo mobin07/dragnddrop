@@ -4,10 +4,12 @@ import {
     AccordionItem,
     AccordionButton,
     AccordionPanel,
-    AccordionIcon,Box
+    AccordionIcon
   } from '@chakra-ui/react'
 import { useState } from 'react'
-
+import { BiDotsVerticalRounded } from "react-icons/bi";
+import { Flex, Spacer,Box } from '@chakra-ui/react'
+import Pop from './Pop';
 const SubAccord = ({main,category,subCategory,arr1}) => {
 
     console.log('bello')
@@ -28,7 +30,7 @@ const SubAccord = ({main,category,subCategory,arr1}) => {
     <AccordionPanel pb={4}>
         {
             ans?.map((element)=>{
-                return ( <Box style={{border:'1px solid black',marginTop:'5px',borderRadius:"10px"}}>{element}</Box>)
+                return ( <Box style={{border:'1px solid black',marginTop:'5px',borderRadius:"10px"}}><Flex>{element}<Spacer/><Pop/></Flex></Box>)
             })
         }
      
